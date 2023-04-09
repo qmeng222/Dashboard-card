@@ -35,3 +35,4 @@
   - if cards go above 265px in width, they will wrap to another row;
   - if cards go below 265px in width, they will stretch to take up the available remaining container width;
   - when cards wrap to a new row (auto-fit), they will line up from left to right with the cards above them, matching their widths.
+- `-webkit-column-break-inside: avoid;` makes sure that each card does not get its content split.
