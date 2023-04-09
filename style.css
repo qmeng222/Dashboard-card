@@ -1,9 +1,37 @@
-/* Assign grid instructions to the parent grid container:  */
+/* Non-mobile styles, 750px breakpoint */
+@media only screen and (min-width: 46.875em) {
+  /* Show sidenav */
+  .grid-container {
+    grid-template-columns: 240px 1fr;
+    grid-template-areas:
+      "sidenav header"
+      "sidenav main"
+      "sidenav footer";
+  }
+
+  .sidenav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Medium-sized screen breakpoint (tablet, 1050px) */
+@media only screen and (min-width: 65.625em) {
+  /* Break out main cards into two columns */
+  .main-cards {
+    column-count: 2;
+  }
+}
+
+/* Make the dashboard mobile-friendly: */
 .grid-container {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 1fr; /* Side nav is hidden on mobile */
   grid-template-rows: 50px 1fr 50px;
-  grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   height: 100vh;
 }
 
@@ -14,8 +42,7 @@
 }
 
 .sidenav {
-  display: flex;
-  flex-direction: column;
+  display: none;
   grid-area: sidenav;
   background-color: #394263;
 }
@@ -71,7 +98,7 @@
 }
 
 .main-cards {
-  column-count: 2;
+  column-count: 1;
   column-gap: 20px;
   margin: 20px;
 }

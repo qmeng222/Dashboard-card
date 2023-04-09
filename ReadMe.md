@@ -1,4 +1,22 @@
-# Study Notes
+# Dashboard Card
+
+## Introduction:
+
+- About the project: This project aims to create a modern, responsive dashboard layout using CSS Grid and Flexbox, without any framework.
+- Project goal:
+  1. Provide me with the knowledge and skills needed to design and develop a beautiful, fully functional dashboard page that is both responsive and visually appealing.
+  2. Learn how to create a layout that adapts to different screen sizes and devices, making it fully responsive.
+  3. Learn how to incorporate a sliding side navigation that enhances the user experience and provides easy access to all the necessary information.
+
+<br>
+
+## Overview:
+
+![Dashboard Overview](Dashboard-overview.gif)
+
+<br>
+
+## Study Notes:
 
 - `align-items` property: y-axis
   - `align-items: flex-start;` positions items at the beginning of the container.
@@ -35,4 +53,5 @@
   - if cards go above 265px in width, they will wrap to another row;
   - if cards go below 265px in width, they will stretch to take up the available remaining container width;
   - when cards wrap to a new row (auto-fit), they will line up from left to right with the cards above them, matching their widths.
-- `-webkit-column-break-inside: avoid;` makes sure that each card does not get its content split.
+- `-webkit-column-break-inside: avoid;` prevents breaking an element (for example, a card) across multiple columns when using a multi-column layout, even if there is not enough space for the entire card to fit.
+- `box-sizing: border-box` tells the browser to include padding and border widths in the total width and height of an element.
