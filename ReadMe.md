@@ -1,4 +1,4 @@
-# Study Note
+# Study Notes
 
 - `align-items` property: y-axis
   - `align-items: flex-start;` positions items at the beginning of the container.
@@ -9,5 +9,20 @@
   - `justify-content: flex-start;` positions items at the beginning of the container.
   - `justify-content: center;` positions items at the center of the container.
   - `justify-content: flex-end;` positions items at the end of the container.
+  - `ustify-content: space-between;` will have equal spaces between items.
+  - `ustify-content: space-around;` will have equal spaces around items.
+  - `ustify-content: space-evenly;` all spaces are equal.
   - [Demo all](https://www.w3schools.com/cssref/playdemo.php?filename=playcss_justify-content)
--
+- `flex-direction` property:
+  - `flex-direction: row` displays items horizontally as a row.
+  - `flex-direction: row-reverse` displays items in reverse order as a row.
+  - `flex-direction: column` displays items vertically as a column.
+  - `flex-direction: column-reverse` displays items in reverse order as a column.
+  - [Demo all](https://www.w3schools.com/cssref/playdemo.php?filename=playcss_flex-direction&preval=row)
+- `list-style-type` property:
+  - `list-style-type: none;` no marker is shown.
+  - `list-style-type: disc;` filled circle (default).
+  - `list-style-type: circle;` marker is a circle.
+  - `list-style-type: square;` marker is a square.
+  - [Demo all](https://www.w3schools.com/cssref/playdemo.php?filename=playcss_list-style-type)
+- `cursor` property: [Demo](https://www.w3schools.com/cssref/tryit.php?filename=trycss_cursor)

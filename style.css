@@ -14,8 +14,29 @@
 }
 
 .sidenav {
+  display: flex;
+  flex-direction: column;
   grid-area: sidenav;
   background-color: #394263;
+}
+
+/* sidenav list: */
+.sidenav__list {
+  padding: 0;
+  margin-top: 85px;
+  list-style-type: none;
+}
+
+/* sidenav list items: */
+.sidenav__list-item {
+  padding: 20px 20px 20px 40px; /* left 40px */
+  color: #ddd;
+}
+
+/* mouse over effect for sidenav list items */
+.sidenav__list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .main {
@@ -34,6 +55,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 0 16px; /* left and right only */
   background-color: #648ca6;
 }
