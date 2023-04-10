@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/7.8.4/d3.min.js"></script>
     <script
       src="https://kit.fontawesome.com/e7bd0367ef.js"
       crossorigin="anonymous"
@@ -13,12 +14,20 @@
   </head>
   <body>
     <div class="grid-container">
+      <div class="menu-icon">
+        <i class="fas fa-bars header__menu"></i>
+      </div>
+
       <header class="header">
         <div class="header__search">Search...</div>
         <div class="header__avatar">Your avatar</div>
       </header>
 
       <aside class="sidenav">
+        <div class="sidenav__close-icon">
+          <i class="fas fa-times sidenav__brand-close"></i>
+        </div>
+
         <ul class="sidenav__list">
           <li class="sidenav__list-item">Item One</li>
           <li class="sidenav__list-item">Item Two</li>
@@ -36,20 +45,20 @@
 
         <div class="main-overview">
           <div class="overviewcard">
-            <div class="overviewcard__icon">Overview</div>
-            <div class="overviewcard__info">Card</div>
+            <div class="overviewcard__icon">Logo</div>
+            <div class="overviewcard__info">Info</div>
           </div>
           <div class="overviewcard">
-            <div class="overviewcard__icon">Overview</div>
-            <div class="overviewcard__info">Card</div>
+            <div class="overviewcard__icon">Logo</div>
+            <div class="overviewcard__info">Info</div>
           </div>
           <div class="overviewcard">
-            <div class="overviewcard__icon">Overview</div>
-            <div class="overviewcard__info">Card</div>
+            <div class="overviewcard__icon">Logo</div>
+            <div class="overviewcard__info">Info</div>
           </div>
           <div class="overviewcard">
-            <div class="overviewcard__icon">Overview</div>
-            <div class="overviewcard__info">Card</div>
+            <div class="overviewcard__icon">Logo</div>
+            <div class="overviewcard__info">Info</div>
           </div>
         </div>
 
@@ -61,9 +70,35 @@
       </main>
 
       <footer class="footer">
-        <div class="footer__copyright">&copy; 2023 MTH</div>
-        <div class="footer__signature">Made with love by Qingying</div>
+        <div class="footer__copyright">&copy; 2023 Dashboard Inc.</div>
+        <div class="footer__signature">Made with ❤️ by Qingying</div>
       </footer>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      const menuIconEl = $(".menu-icon");
+      const sidenavEl = $(".sidenav");
+      const sidenavCloseEl = $(".sidenav__close-icon");
+
+      // Add and remove provided class names
+      function toggleClassName(el, className) {
+        if (el.hasClass(className)) {
+          el.removeClass(className);
+        } else {
+          el.addClass(className);
+        }
+      }
+
+      // Open the side nav on click
+      menuIconEl.on("click", function () {
+        toggleClassName(sidenavEl, "active");
+      });
+
+      // Close the side nav on click
+      sidenavCloseEl.on("click", function () {
+        toggleClassName(sidenavEl, "active");
+      });
+    </script>
   </body>
 </html>
